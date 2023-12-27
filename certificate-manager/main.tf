@@ -1,9 +1,4 @@
-variable "domain_name" {}
-variable "hosted_zone_id" {}
 
-output "dev_proj_1_acm_arn" {
-  value = aws_acm_certificate.dev_proj_1_acm_arn.arn
-}
 
 resource "aws_acm_certificate" "dev_proj_1_acm_arn" {
   domain_name       = var.domain_name

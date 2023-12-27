@@ -1,12 +1,5 @@
-variable "lb_target_group_name" {}
-variable "lb_target_group_port" {}
-variable "lb_target_group_protocol" {}
-variable "vpc_id" {}
-variable "ec2_instance_id" {}
 
-output "dev_proj_1_lb_target_group_arn" {
-  value = aws_lb_target_group.dev_proj_1_lb_target_group.arn
-}
+
 
 resource "aws_lb_target_group" "dev_proj_1_lb_target_group" {
   name     = var.lb_target_group_name

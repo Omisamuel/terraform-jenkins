@@ -1,26 +1,3 @@
-variable "lb_name" {}
-variable "lb_type" {}
-variable "is_external" { default = false }
-variable "sg_enable_ssh_https" {}
-variable "subnet_ids" {}
-variable "tag_name" {}
-variable "lb_target_group_arn" {}
-variable "ec2_instance_id" {}
-variable "lb_listner_port" {}
-variable "lb_listner_protocol" {}
-variable "lb_listner_default_action" {}
-variable "lb_https_listner_port" {}
-variable "lb_https_listner_protocol" {}
-variable "dev_proj_1_acm_arn" {}
-variable "lb_target_group_attachment_port" {}
-
-output "aws_lb_dns_name" {
-  value = aws_lb.dev_proj_1_lb.dns_name
-}
-
-output "aws_lb_zone_id" {
-  value = aws_lb.dev_proj_1_lb.zone_id
-}
 
 
 resource "aws_lb" "dev_proj_1_lb" {

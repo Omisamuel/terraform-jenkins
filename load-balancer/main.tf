@@ -1,5 +1,3 @@
-
-
 resource "aws_lb" "dev_proj_1_lb" {
   name               = var.lb_name
   internal           = var.is_external
@@ -10,7 +8,7 @@ resource "aws_lb" "dev_proj_1_lb" {
   enable_deletion_protection = false
 
   tags = {
-    Name = "example-lb"
+    Name = var.lb_name
   }
 }
 

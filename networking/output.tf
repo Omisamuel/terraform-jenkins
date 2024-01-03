@@ -1,5 +1,5 @@
 output "dev_proj_1_vpc_id" {
-  value = aws_vpc.dev_proj_1_vpc_eu_central_1.id
+  value = aws_vpc.dev_proj_1_vpc_us_west_1.id
 }
 
 output "dev_proj_1_public_subnets" {

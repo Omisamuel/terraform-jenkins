@@ -34,8 +34,8 @@ resource "aws_lb_listener" "dev_proj_1_lb_https_listner" {
   load_balancer_arn = aws_lb.dev_proj_1_lb.arn
   port              = var.lb_https_listner_port
   protocol          = var.lb_https_listner_protocol
-  ssl_policy        = "ELBSecurityPolicy-FS-1-2-Res-2019-08"
-  certificate_arn   = var.dev_proj_1_acm_arn
+  ssl_policy        = "ELBSecurityPolicy-2016-08"
+  certificate_arn   = var.dev_proj_1_acm_arn.arn
 
   default_action {
     type             = var.lb_listner_default_action

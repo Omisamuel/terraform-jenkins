@@ -52,20 +52,20 @@ module "alb" {
   lb_listner_default_action = "forward"
   lb_https_listner_port     = 443
   lb_https_listner_protocol = "HTTPS"
-  dev_proj_1_acm_arn        = module.aws_ceritification_manager.dev_proj_1_acm_arn
+  dev_proj_1_acm_arn              = module.aws_ceritification_manager.dev_proj_1_acm_arn
   lb_target_group_attachment_port = 8080
 }
 
 module "hosted_zone" {
   source          = "./hosted-zone"
-  domain_name     = "jenkins.omsam.de"
+  domain_name     = "jenkins.omilabs.com"
   aws_lb_dns_name = module.alb.aws_lb_dns_name
   aws_lb_zone_id  = module.alb.aws_lb_zone_id
 }
 
 module "aws_ceritification_manager" {
   source         = "./certificate-manager"
-  domain_name    = "jenkins.omsam.de"
+  domain_name    = "jenkins.omilabs.com"
   hosted_zone_id = module.hosted_zone.hosted_zone_id
 }
 

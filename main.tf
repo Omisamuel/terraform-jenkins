@@ -58,14 +58,16 @@ module "alb" {
 
 module "hosted_zone" {
   source          = "./hosted-zone"
-  domain_name     = "jenkins.omilabs.com"
+  domain_name     = "jenkins.omsam.de"
+  #domain_name     = "jenkins.omilabs.com"
   aws_lb_dns_name = module.alb.aws_lb_dns_name
   aws_lb_zone_id  = module.alb.aws_lb_zone_id
 }
 
 module "aws_ceritification_manager" {
   source         = "./certificate-manager"
-  domain_name    = "jenkins.omilabs.com"
+  domain_name    = "jenkins.omsam.de"
+  #domain_name     = "jenkins.omilabs.com"
   hosted_zone_id = module.hosted_zone.hosted_zone_id
 }
 

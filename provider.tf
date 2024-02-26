@@ -9,5 +9,5 @@ terraform {
 
 provider "aws" {
   region                   = "us-west-1"
-  shared_credentials_files = ["/Users/omisam/.aws/credentials"]
+  shared_credentials_files = ["/Users/xxxx/.aws/credentials"]
 }
